@@ -1,0 +1,17 @@
+ImageSize  = width:160 height:550
+PlotArea   = width: 25 height:530 left:50 bottom:10
+DateFormat = yyyy
+Period     = from:1919 till:1991
+TimeAxis   = orientation:vertical
+ScaleMajor = unit:year increment:5 start:1920
+
+PlotData=
+  color:red width:25 mark:(line,white) align:left fontsize:S shift:(25,0)
+  # shift texts up or down manually to avoid overlap
+  from:start till:1922 shift:(,15)   text:Vladimir~Ilyich~[[Lenin]]
+  from:1922  till:1953 shift:(,5)    text:[[Stalin|Josef~Stalin]]
+  from:1953  till:1964 shift:(,5)    text:Nikita~[[Khrushchev]]
+  from:1964  till:1982 shift:(,5)    text:Leonid~[[Brezhnev]]
+  from:1982  till:1984 shift:(,-12)  text:Yuri~[[Andropov]]
+  from:1984  till:1985 shift:(,4)    text:Konstantin~[[Chernenko]] fontsize:XS
+  from:1985  till:end  shift:(,10)   text:Mikhail~[[Gorbachev]]
