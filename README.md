@@ -14,6 +14,8 @@ docker build --platform=linux/amd64 -t easytimeline .
 
 ## Running the container
 
+We volume-mount the `mnt` directory into the container, so you should place input files into there. EasyTimeline implicitly outputs alongside the given input file.
+
 ```sh
 # On x86_64 (e.g. Intel Mac):
 docker run -v "${PWD}/mnt:/root/mnt:rw" easytimeline perl -X EasyTimeline.pl -i mnt/sample.txt
@@ -21,6 +23,8 @@ docker run -v "${PWD}/mnt:/root/mnt:rw" easytimeline perl -X EasyTimeline.pl -i 
 # Otherwise (e.g. M1 Mac):
 docker run --platform linux/amd64 -v "${PWD}/mnt:/root/mnt:rw" easytimeline perl -X EasyTimeline.pl -i mnt/sample.txt
 ```
+
+This will generate two files: `sample.png` and `sample.svg`.
 
 ## Libraries used
 
